@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Autio</title>
+
+    <!-- Tailwind build -->
+    <link href="dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+
+      .l-shape{
+        position:absolute;top:320px;left:10px;width:1690px;height:500px;
+        background:rgba(59,59,59,.3);backdrop-filter:blur(2px);
+        clip-path:path('M25 0 H1665 a25 25 0 0 1 25 25 V475 a25 25 0 0 1 -25 25 H25 a25 25 0 0 1 -25 -25 V300 a25 25 0 0 1 25 -25 H820 a25 25 0 0 0 25 -25 V25 a25 25 0 0 1 25 -25 Z');
+        z-index:0;
+      }
+
+      .no-select{ user-select:none; }
+    </style>
+  </head>
+
+  <body class="bg-white text-[#1E1E1E]">
+    <!-- Navbar -->
+    <header class="flex items-center justify-between px-6 py-4 border-b text-xs text-[#9C9C9C]">
+      <span class="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#214538]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+        Hi, This is Vroom
+      </span>
+      <span>-Ultimate Used Car Searching Engine</span>
+      <div class="flex items-center gap-4">
+        <button class="bg-[#214538] text-[#FFFEF1] px-4 py-1.5 rounded-full text-sm">Prompt to Search</button>
+        <div class="w-8 h-8 bg-[#214538] rounded-full text-white text-xs flex items-center justify-center font-semibold">J</div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="px-6 py-20 text-center">
+      <div class="flex flex-wrap items-baseline justify-center gap-4">
+        <h1 class="text-[64px] font-light uppercase tracking-wide leading-tight">
+          Hi! This is a tool to help you find the right car for
+          <span class="inline-flex items-center px-8 py-3 bg-[#214538] text-white text-[54px] font-medium uppercase rounded-full whitespace-nowrap">
+            Your Lifestyle
+          </span>
+        </h1>
+      </div>
+    </section>
+
+    <div class="l-shape"></div>
+
+    <!-- Cards row -->
+    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 px-6">
+      <!-- White Card -->
+      <div class="bg-white border border-[#214538] rounded-2xl p-8 shadow-md">
+        <h2 class="text-lg font-bold text-[#214538] mb-4">About This Tool</h2>
+
+        <div class="flex flex-wrap gap-2 mb-3 text-sm">
+          <span data-selectable class="px-4 py-1 rounded-full border border-[#214538] text-[#757575]">Tool kit</span>
+          <span data-selectable class="px-4 py-1 rounded-full border border-[#214538] text-[#757575]">Life style based</span>
+          <span data-selectable class="px-4 py-1 rounded-full border border-[#214538] text-[#757575]">User Centered</span>
+          <span data-selectable data-selected="on" class="px-4 py-1 rounded-full bg-[#214538] text-[#FFFEF1]">AI Search Engine</span>
+        </div>
+
+        <p class="text-sm">
+          Hi, this is an AI-backed searching engine for you to get the best car
+          fit your life-style. The tool adjusts based on your vehicle
+          familiarity and preferences.
+        </p>
+      </div>
+
+      <!-- Green Info Box -->
+      <div class="bg-[#214538] text-white p-8 rounded-2xl">
+        <h3 class="text-xl font-bold mb-4">We’d Like To Know A Little Bit More About You</h3>
+        <p class="text-sm text-[#D3D3D3]">
+          Based on how much you know about the cars, this tool will adjust
+          itself to provide you with better service! Now drag the bar to adjust
+          the system based on your preferences!
+        </p>
+      </div>
+    </div>
+
+    <!-- Slider -->
+    <div class="relative z-10 px-6 pt-24 pb-24 no-select">
+      <!-- labels share bar width -->
+      <div class="w-[1550px] text-white font-bold tracking-wide mb-4 text-lg flex justify-between">
+        <span>BEGINNER</span><span>CASUAL DRIVER</span><span>ENTHUSIAST</span><span>PROFESSIONAL</span>
+      </div>
+
+      <div id="sliderBar" class="relative w-[1550px]">
+        <div class="h-16 bg-[#214538] rounded-full flex items-center px-10">
+          <div class="w-full border-t-2 border-white"></div>
+        </div>
+
+        <!-- knob -->
+        <div id="sliderKnob" class="absolute top-1/2 -translate-y-1/2 cursor-pointer" style="left:40px">
+          <div class="w-12 h-12 bg-[#214538] border-4 border-white rounded-full flex items-center justify-center">
+            <div class="w-4 h-4 bg-white rounded-full"></div>
+          </div>
+        </div>
+
+        <!-- GREEN ARROW MOVED *OUTSIDE* BAR (left-full + margin) -->
+        <div class="absolute left-full ml-4 top-1/2 -translate-y-1/2">
+          <div class="w-12 h-12 bg-[#A8F5C9] rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#214538]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Behaviour -->
+    <script>
+      /* pills */
+      const SELECTED   = 'bg-[#214538] text-[#FFFEF1] border-transparent';
+      const UNSELECTED = 'border border-[#214538] text-[#757575]';
+
+      document.querySelectorAll('[data-selectable]').forEach(pill => refresh(pill));
+      document.querySelectorAll('[data-selectable]').forEach(pill=>{
+        pill.addEventListener('click', ()=>{
+          pill.dataset.selected = pill.dataset.selected==='on' ? 'off' : 'on';
+          refresh(pill);
+        });
+      });
+      function refresh(el){
+        el.classList.remove(...SELECTED.split(' '), ...UNSELECTED.split(' '));
+        const next = (el.dataset.selected==='on'||!el.dataset.selected) ? SELECTED : UNSELECTED;
+        el.classList.add(...next.split(' '));
+      }
+
+      /* slider */
+      const bar      = document.getElementById('sliderBar');
+      const knob     = document.getElementById('sliderKnob');
+      const padding  = 40;          // px-10 each side
+      const knobW    = 48;          // 12px (border) + 24 (inner) + 12
+      let dragging   = false;
+
+      knob.addEventListener('pointerdown', e=>{
+        dragging = true;
+        knob.setPointerCapture(e.pointerId);
+      });
+
+      document.addEventListener('pointermove', e=>{
+        if(!dragging) return;
+        const rect = bar.getBoundingClientRect();
+        let x = e.clientX - rect.left - padding;
+        const max = rect.width - padding*2 - knobW;
+        x = Math.max(0, Math.min(x, max));
+        knob.style.left = `${x + padding}px`;
+      });
+      document.addEventListener('pointerup', ()=> dragging=false);
+    </script>
+  </body>
+</html>
