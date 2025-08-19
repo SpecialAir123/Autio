@@ -17,9 +17,9 @@
       body { font-family: 'Inter', sans-serif; }
 
       .l-shape{
-        position:absolute;top:320px;left:10px;width:1690px;height:500px;
-        background:rgba(59,59,59,.3);backdrop-filter:blur(2px);
-        clip-path:path('M25 0 H1665 a25 25 0 0 1 25 25 V475 a25 25 0 0 1 -25 25 H25 a25 25 0 0 1 -25 -25 V300 a25 25 0 0 1 25 -25 H820 a25 25 0 0 0 25 -25 V25 a25 25 0 0 1 25 -25 Z');
+        position:absolute;top:400px;left:72px;width:1681px;height:773px;
+        background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1680&q=80') center/cover no-repeat;
+        border-radius:25px;
         z-index:0;
       }
 
@@ -117,6 +117,47 @@
         </div>
       </div>
     </div>
+
+    <!-- Knowledge level cards -->
+    <div class="relative z-10 flex flex-wrap justify-center gap-6 px-6 -mt-16">
+      <!-- Beginner -->
+      <div class="flex flex-col justify-center items-center p-6 gap-4 w-[369px] h-[252px] bg-[#90EBA6] border-2 border-[#90EBA6] shadow-md rounded-2xl text-center">
+        <div class="flex items-center justify-center w-24 h-24 border-4 border-[#214538] rounded-full text-4xl text-[#214538]">
+          &#9733;
+        </div>
+        <h3 class="font-bold text-2xl uppercase text-[#214538]">Beginner</h3>
+        <p class="text-lg text-[#214538]">I need easy explanations of car features and inspections.</p>
+      </div>
+
+      <!-- Casual Driver -->
+      <div class="flex flex-col justify-center items-center p-6 gap-4 w-[369px] h-[252px] bg-[rgba(144,235,166,0.1)] border-2 border-[#757575] rounded-2xl text-center text-[#FFFEF1]">
+        <div class="flex items-center justify-center w-24 h-24 border-4 border-[#FFFEF1] rounded-full text-2xl gap-1">
+          <span>&#9733;</span><span>&#9733;</span>
+        </div>
+        <h3 class="font-bold text-2xl uppercase">Casual Driver</h3>
+        <p class="text-lg">I'm okay with basic technical terms.</p>
+      </div>
+
+      <!-- Enthusiast -->
+      <div class="flex flex-col justify-center items-center p-6 gap-4 w-[369px] h-[252px] bg-[rgba(144,235,166,0.1)] border-2 border-[#757575] rounded-2xl text-center text-[#FFFEF1]">
+        <div class="flex flex-wrap justify-center items-center w-24 h-24 border-4 border-[#FFFEF1] rounded-full text-2xl gap-1">
+          <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+        </div>
+        <h3 class="font-bold text-2xl uppercase">Enthusiast</h3>
+        <p class="text-lg">I'm familiar with cars and want more details.</p>
+      </div>
+
+      <!-- Professional -->
+      <div class="flex flex-col justify-center items-center p-6 gap-4 w-[369px] h-[252px] bg-[rgba(144,235,166,0.1)] border-2 border-[#757575] rounded-2xl text-center text-[#FFFEF1]">
+        <div class="flex flex-wrap justify-center items-center w-24 h-24 border-4 border-[#FFFEF1] rounded-full text-2xl gap-1">
+          <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+        </div>
+        <h3 class="font-bold text-2xl uppercase">Professional</h3>
+        <p class="text-lg">I'm an automotive expert and love car knowledge.</p>
+      </div>
+    </div>
+
+    <p class="relative z-10 text-[#214538] px-6 pb-24">Adjust the knob to let us know your car knowledge level.</p>
 
     <!-- Behaviour -->
     <script>
